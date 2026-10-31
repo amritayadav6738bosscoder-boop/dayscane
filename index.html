@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daywell | Reflection Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">D</div>
+          <div>
+            <p class="eyebrow">Daily reflection</p>
+            <h1>Daywell</h1>
+          </div>
+        </div>
+        <button id="resetBtn" class="ghost-button" type="button">Reset journal</button>
+      </header>
+
+      <main class="journal-layout">
+        <section class="entry-card">
+          <div class="section-heading">
+            <p class="eyebrow">Today</p>
+            <h2>Capture your thoughts</h2>
+          </div>
+
+          <form id="entryForm">
+            <label class="field-group">
+              <span>Date</span>
+              <input id="entryDate" type="date" required />
+            </label>
+
+            <label class="field-group">
+              <span>Mood</span>
+              <select id="moodSelect">
+                <option value="happy">Happy</option>
+                <option value="calm">Calm</option>
+                <option value="tired">Tired</option>
+                <option value="stressed">Stressed</option>
+                <option value="excited">Excited</option>
+              </select>
+            </label>
+
+            <label class="field-group">
+              <span>What went well?</span>
+              <textarea id="winsInput" rows="3" placeholder="Write one or two highlights..."></textarea>
+            </label>
+
+            <label class="field-group">
+              <span>What felt hard?</span>
+              <textarea id="challengesInput" rows="3" placeholder="Anything that felt heavy or difficult?"></textarea>
+            </label>
+
+            <label class="field-group">
+              <span>Gratitude</span>
+              <textarea id="gratitudeInput" rows="2" placeholder="What are you thankful for today?"></textarea>
+            </label>
+
+            <button class="primary-button" type="submit">Save reflection</button>
+          </form>
+        </section>
+
+        <aside class="history-card">
+          <div class="section-heading inline-title">
+            <p class="eyebrow">Journal</p>
+            <h2>Recent entries</h2>
+          </div>
+          <ul id="entryList" class="entry-list" aria-live="polite"></ul>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
